@@ -1,0 +1,373 @@
+
+<div class="website">
+  <header>
+    <p class="tag">♡ A SPECIAL SURPRISE FOR YOU ♡</p>
+    <h1>Happy Birthday,<br>My Love 🎀</h1>
+    <p>To my favorite boy, my happiness, and my forever person.</p>
+    <div class="heart">💗</div>
+    <button onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">Open Your Surprise ↓</button>
+  </header>
+
+  <section class="card">
+    <p class="tag">YOUR SPECIAL DAY</p>
+    <h2>Counting Down To Your Birthday 🎂</h2>
+    <div class="countdown">
+      <div><b id="days">00</b><small>Days</small></div>
+      <div><b id="hours">00</b><small>Hours</small></div>
+      <div><b id="minutes">00</b><small>Minutes</small></div>
+      <div><b id="seconds">00</b><small>Seconds</small></div>
+    </div>
+    <h3 id="birthdayMessage">I can't wait to celebrate you! ♡</h3>
+  </section>
+
+  <section class="card" id="memories">
+    <p class="tag">OUR LITTLE WORLD</p>
+    <h2>Our Beautiful Memories 📸</h2>
+    <p>Every picture is a memory I want to keep forever.</p>
+    <div class="gallery">
+      <div class="photo">
+        <img id="pic1" alt="Our memory">
+        <label>Choose our photo<input type="file" accept="image/*" onchange="showPhoto(event,'pic1')"></label>
+        <p contenteditable="true">Our favorite moment ♡</p>
+      </div>
+      <div class="photo">
+        <img id="pic2" alt="Our memory">
+        <label>Choose our photo<input type="file" accept="image/*" onchange="showPhoto(event,'pic2')"></label>
+        <p contenteditable="true">Your beautiful smile</p>
+      </div>
+      <div class="photo">
+        <img id="pic3" alt="Our memory">
+        <label>Choose our photo<input type="file" accept="image/*" onchange="showPhoto(event,'pic3')"></label>
+        <p contenteditable="true">A day to remember</p>
+      </div>
+      <div class="photo">
+        <img id="pic4" alt="Our memory">
+        <label>Choose our photo<input type="file" accept="image/*" onchange="showPhoto(event,'pic4')"></label>
+        <p contenteditable="true">My favorite person</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <p class="tag">A MILLION LITTLE REASONS</p>
+    <h2>Why I Love You 💗</h2>
+    <div class="reasons">
+      <div>💕 <b>Your Smile</b><br>You make my world brighter.</div>
+      <div>💕 <b>Your Heart</b><br>Your kindness makes me fall for you more.</div>
+      <div>💕 <b>Your Laugh</b><br>My favorite sound ever.</div>
+      <div>💕 <b>Your Hugs</b><br>I wish I could hug you right now.</div>
+      <div>💕 <b>Our Talks</b><br>I never get tired of talking to you.</div>
+      <div>💕 <b>Just You</b><br>You are my favorite person.</div>
+    </div>
+  </section>
+
+  <section class="card center">
+    <p class="tag">OPEN WHEN YOU MISS ME</p>
+    <h2>A Love Letter Just For You 💌</h2>
+    <button onclick="toggleLetter('letter1')">Open My Letter ♡</button>
+    <article class="letter" id="letter1">
+      <h2>To My Favorite Boy</h2>
+      <p>Happy birthday, baby!! 💗</p>
+      <p>I wish I could be beside you today, holding your hand, giving you the biggest hug and covering your face with birthday kisses.</p>
+      <p>Thank you for being my happiness, my favorite notification and the person who makes me smile at my phone for no reason.</p>
+      <p>I hope this new year brings you success, happiness, good health and all the beautiful things you deserve. Never give up on your dreams. I'll always be cheering for you.</p>
+      <p>Even if distance keeps us apart, my heart will always be close to yours.</p>
+      <p>I love you more than words can ever explain.</p>
+      <p><i>Forever your girl ♡</i></p>
+    </article>
+  </section>
+
+  <section class="card center">
+    <p class="tag">A LITTLE MORE LOVE</p>
+    <h2>Open When You Need A Smile 💗</h2>
+    <button onclick="toggleLetter('letter2')">Read Another Letter</button>
+    <article class="letter" id="letter2">
+      <h2>My Dear Love ♡</h2>
+      <p>Whenever life gets difficult, remember that you have someone who believes in you, supports you and loves you endlessly.</p>
+      <p>You don't have to be perfect. I love you exactly as you are.</p>
+      <p>Sending you a thousand hugs and kisses. 🥹</p>
+    </article>
+  </section>
+
+  <section class="card center">
+    <p class="tag">ONE LAST SURPRISE</p>
+    <h2>Your Birthday Gift 🎁</h2>
+    <button onclick="toggleLetter('gift')">Open Your Gift ♡</button>
+    <article class="letter" id="gift">
+      <div class="heart">🎁💗</div>
+      <h2>Unlimited Love!</h2>
+      <p>Your gift includes unlimited hugs, kisses, silly jokes, late-night calls and a lifetime of choosing you.</p>
+      <p>Redeem whenever you need me! ❤️</p>
+    </article>
+  </section>
+
+  <section class="card center final">
+    <p class="tag">MY FAVORITE PERSON, ALWAYS</p>
+    <h2>And One Last Thing...</h2>
+    <div class="biglove">I LOVE YOU</div>
+    <p>Today, tomorrow and every day after that.</p>
+    <button onclick="toggleLetter('secret')">One More Secret ♡</button>
+    <article class="letter" id="secret">
+      If I could choose my favorite person all over again, I would still choose you. Every single time. Happy birthday, my forever favorite boy. 🥹💗
+    </article>
+  </section>
+
+  <footer>Made with all my love, just for you ♡</footer>
+</div>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg,#fff0f6,#fff9fc,#ffe6f0);
+  color: #70445a;
+  font-family: Georgia,serif;
+}
+
+.website {
+  max-width: 780px;
+  margin: auto;
+  padding: 15px;
+}
+
+header {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.tag {
+  color: #d94d8a;
+  font: bold 11px Arial,sans-serif;
+  letter-spacing: 3px;
+}
+
+h1 {
+  color: #d94d8a;
+  font-size: clamp(42px,10vw,72px);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+h2 {
+  color: #c94e87;
+  font-weight: normal;
+  text-align: center;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.heart {
+  font-size: 45px;
+  margin: 15px;
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  50% { transform: scale(1.2); }
+}
+
+button {
+  background: #ed80ad;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 23px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #d94d8a;
+}
+
+.card {
+  background: #ffffffed;
+  border: 1px solid #ffd8e8;
+  border-radius: 23px;
+  padding: 25px 18px;
+  margin: 22px 0;
+  box-shadow: 0 10px 30px #d65b8a15;
+}
+
+.center {
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin: 25px 0;
+}
+
+.countdown div {
+  background: #ffe5f0;
+  padding: 14px;
+  border-radius: 15px;
+  min-width: 65px;
+}
+
+.countdown b {
+  display: block;
+  color: #d94d8a;
+  font: bold 27px Arial;
+}
+
+.countdown small {
+  font: 11px Arial;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+
+.photo {
+  background: white;
+  border: 1px solid #f4d2e1;
+  padding: 9px;
+  text-align: center;
+  box-shadow: 0 5px 15px #00000010;
+}
+
+.photo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: #ffe6f0;
+}
+
+.photo label {
+  display: block;
+  color: #d94d8a;
+  font: 12px Arial;
+  padding: 10px 0;
+}
+
+.photo input {
+  width: 100%;
+  font-size: 11px;
+}
+
+.photo p {
+  font-style: italic;
+  font-size: 13px;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.reasons div {
+  background: #fff0f6;
+  padding: 16px;
+  border-radius: 15px;
+  line-height: 1.7;
+}
+
+.letter {
+  display: none;
+  text-align: left;
+  background: #fff5fa;
+  border: 1px solid #ffd8e8;
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 18px;
+  line-height: 1.9;
+}
+
+.biglove {
+  color: #d94d8a;
+  font-size: clamp(40px,10vw,65px);
+  margin: 25px 0;
+}
+
+.final {
+  background: linear-gradient(145deg,#ffe4f0,#fff8fb);
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 10px;
+  color: #bd7d99;
+  font-size: 13px;
+}
+
+@media(max-width:450px) {
+  .gallery,.reasons {
+    grid-template-columns: 1fr;
+  }
+  .photo img {
+    height: 260px;
+  }
+}
+
+// His birthday: November 8, 2026
+// Uses the local time of the device.
+
+const birthday = new Date(2026, 10, 8, 0, 0, 0);
+
+function updateCountdown() {
+  let diff = birthday.getTime() - Date.now();
+
+  if (diff <= 0) {
+    document.getElementById("birthdayMessage").textContent =
+      "Happy Birthday, My Love! 🎂💗";
+    diff = 0;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(diff / 86400000);
+
+  document.getElementById("hours").textContent =
+    Math.floor((diff % 86400000) / 3600000);
+
+  document.getElementById("minutes").textContent =
+    Math.floor((diff % 3600000) / 60000);
+
+  document.getElementById("seconds").textContent =
+    Math.floor((diff % 60000) / 1000);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Open and close letters
+function toggleLetter(id) {
+  const letter = document.getElementById(id);
+
+  letter.style.display =
+    letter.style.display === "block" ? "none" : "block";
+}
+
+// Add your own photos
+function showPhoto(event, id) {
+  const file = event.target.files[0];
+
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function() {
+    document.getElementById(id).src = reader.result;
+  };
+
+  reader.readAsDataURL(file);
+}
+
